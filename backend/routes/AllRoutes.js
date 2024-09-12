@@ -16,7 +16,7 @@ allroutes.use(express.json());
 allroutes.use("/files", express.static("files"));
 allroutes.use("/videos", express.static("videos"));
 
-ffmpeg.setFfmpegPath('C:/ffmpeg/ffmpeg-master-latest-win64-gpl/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe');// Adjust the path as needed
+ffmpeg.setFfmpegPath('/opt/homebrew/bin/ffmpeg');// Adjust the path as needed
 const convertPdfToText = async (pdfPath) => {
     try {
         const dataBuffer = fs.readFileSync(pdfPath);
